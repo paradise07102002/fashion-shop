@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/home_page.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
@@ -29,16 +30,13 @@ class _BottomNavigationBarExampleState
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
     Text(
-      'Index 0: Home',
+      'Index 1: Favorite',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
+      'Index 2: Cart',
       style: optionStyle,
     ),
     Text(
@@ -56,9 +54,6 @@ class _BottomNavigationBarExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
